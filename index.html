@@ -9,7 +9,21 @@
 </head>
 <body>
 
-  <div class="pos-container">
+  <!-- PASSWORD PROTECTION OVERLAY -->
+  <div id="auth-overlay" class="auth-overlay">
+    <div class="auth-card">
+      <div class="auth-icon"><i class="fa-solid fa-lock"></i></div>
+      <h2>Workspace Locked</h2>
+      <p>Enter your password to access Mehedi's Workspace</p>
+      <div class="auth-input-group">
+        <input type="password" id="password-input" placeholder="Enter Password..." onkeypress="handlePasswordKey(event)">
+        <button onclick="checkPassword()">Unlock <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <p id="auth-error" class="auth-error" style="display: none;">Incorrect password. Try again!</p>
+    </div>
+  </div>
+
+  <div class="pos-container" id="main-workspace" style="display: none;">
     
     <!-- LEFT SIDEBAR -->
     <aside class="sidebar">
