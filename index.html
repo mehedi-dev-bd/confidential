@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mehedi: Chapters & Codes | POS Workspace</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="pos-container">
+    
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Chapters & Codes</h2>
+        <p class="user-role">Mehedi's Workspace</p>
+      </div>
+
+      <nav class="sidebar-menu">
+        <div class="menu-label">CORE VALUES</div>
+        
+        <button onclick="showInfo('Servant of ALLAH', 'Deep commitment to spiritual growth, daily prayers, and leading a life aligned with Islamic values.', 'https://docs.google.com/spreadsheets/d/1cGv-KvCqzeAJmtnp2ZvZroSexdM5Hexgl9sEdb-Kdx0/edit?usp=sharing')" class="nav-btn hover-effect">
+          <i class="fa-solid fa-kaaba"></i> Servant of ALLAH
+        </button>
+        
+        <button onclick="showInfo('Daily Activity Tracker', 'Tracking daily tasks, routine adherence, habits, and physical productivity.', 'https://docs.google.com/spreadsheets/d/1X_0kkTg9S4VGOsXuCc1Gtb2_ZT0S5t0o79SNuA0Gsuk/edit?usp=sharing')" class="nav-btn hover-effect">
+          <i class="fa-solid fa-bolt"></i> Activity
+        </button>
+
+        <div class="menu-label">LIFE CHAPTERS</div>
+
+        <!-- Early Days Dropdown -->
+        <div class="dropdown-category">
+          <button class="nav-btn hover-effect dropdown-toggle" onclick="toggleSubmenu('earlyDaysMenu')">
+            <i class="fa-solid fa-seedling"></i> Early Days 
+            <i class="fa-solid fa-chevron-down arrow-icon"></i>
+          </button>
+          
+          <div class="submenu-container" id="earlyDaysMenu">
+            <button onclick="showInfo('Academic Foundation', 'Educational records, major subjects, key achievements, and university notes.', 'https://docs.google.com/spreadsheets/d/1gJpTxQ628vzt-s92-Zuvw4QawfK0Da6LEJoYYIQ9uE0/edit?usp=sharing')" class="submenu-btn hover-effect">
+              Academic
+            </button>
+            <button onclick="showInfo('Research Work', 'Research papers, academic interests, publications, and thesis goals.', 'https://docs.google.com/spreadsheets/d/1MStkMIgeFym5QuuQXIVu8FEj5geMYxydYAjtLnHklWo/edit?usp=sharing')" class="submenu-btn hover-effect">
+              Research
+            </button>
+          </div>
+        </div>
+        
+        <!-- Career & Ambition Dropdown -->
+        <div class="dropdown-category">
+          <button class="nav-btn hover-effect dropdown-toggle" onclick="toggleSubmenu('careerMenu')">
+            <i class="fa-solid fa-briefcase"></i> Career & Ambition 
+            <i class="fa-solid fa-chevron-down arrow-icon"></i>
+          </button>
+          
+          <div class="submenu-container" id="careerMenu">
+            <button onclick="showInfo('IELTS Preparation', 'Target band score, study plan, vocabulary lists, and practice schedules.', 'https://docs.google.com/spreadsheets/d/1bHIXDy34Fl7xOFShenUVSPEWUe-5uAieDtclLPcqljA/edit?usp=sharing')" class="submenu-btn hover-effect">
+              IELTS
+            </button>
+            <button onclick="showInfo('Web Development Roadmap', 'Full-stack development goals, coding projects, HTML/CSS/JS/React progress.', 'https://docs.google.com/spreadsheets/d/1pLtU4LlJyDfcgRq5rl8j8EZQPX7WqNe7-Zxjof2jhdY/edit?usp=sharing')" class="submenu-btn hover-effect">
+              Web Development
+            </button>
+            <button onclick="showInfo('Next Campus Preparation', 'Higher education planning, university shortlists, and visa documentation.', 'https://docs.google.com/spreadsheets/d/1jhOT6d5M21wbO7Or3_gWKP7oDc41eAhk3hp3mCUjKG0/edit?usp=sharing')" class="submenu-btn hover-effect">
+              Next Campus Prep
+            </button>
+          </div>
+        </div>
+
+        <!-- People & Relationship Dropdown -->
+        <div class="dropdown-category">
+          <button class="nav-btn hover-effect dropdown-toggle" onclick="toggleSubmenu('peopleMenu')">
+            <i class="fa-solid fa-users"></i> People & Relationship 
+            <i class="fa-solid fa-chevron-down arrow-icon"></i>
+          </button>
+          
+          <div class="submenu-container" id="peopleMenu">
+            <div class="nested-category">
+              <button class="submenu-btn hover-effect nested-toggle" onclick="toggleSubmenu('familyMenu')">
+                <span>Family</span>
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+              </button>
+              <div class="nested-menu" id="familyMenu">
+                <button onclick="showInfo('Dhanial Family Archive', 'Family tree, memories, key records, and important contacts of Dhanial family.', 'https://drive.google.com/drive/folders/YOUR_FOLDER_ID_1')" class="nested-btn hover-effect">
+                  Dhanial Family
+                </button>
+                <button onclick="showInfo('Bafla Family Archive', 'Important records, family trees, and memories of Bafla family.', 'https://drive.google.com/drive/folders/YOUR_FOLDER_ID_2')" class="nested-btn hover-effect">
+                  Bafla Family
+                </button>
+              </div>
+            </div>
+            
+            <button onclick="showInfo('Friends & Network', 'Important contacts, genuine friendships, memories, and personal connections.', 'https://docs.google.com/document/d/YOUR_DOC_FRIENDS/edit')" class="submenu-btn hover-effect">
+              Friends
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-label">THE CODES</div>
+
+        <button onclick="scrollToCard('card-conduct')" class="nav-btn hover-effect">
+          <i class="fa-solid fa-scale-balanced"></i> Code Of Conduct
+        </button>
+        
+        <button onclick="scrollToCard('card-mindset')" class="nav-btn hover-effect">
+          <i class="fa-solid fa-brain"></i> Code Of Mindset
+        </button>
+        
+        <button onclick="scrollToCard('card-ethics')" class="nav-btn hover-effect">
+          <i class="fa-solid fa-shield-halved"></i> Social & Digital Ethics
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <i class="fa-solid fa-circle-user"></i>
+        <span>Workspace of <strong>Mehedi</strong></span>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT AREA -->
+    <main class="main-content">
+      <header class="top-bar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search buttons or rules...">
+        </div>
+        <div class="system-status">
+          <span class="status-indicator"></span> Workspace Active
+        </div>
+      </header>
+
+      <div class="dashboard-body">
+        
+        <!-- ABOUT ME / PROFILE SECTION -->
+        <div class="profile-card">
+          <div class="profile-header">
+            <div class="profile-avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+            <div>
+              <h2>Mehedi Hasan</h2>
+              <p class="profile-tagline">Aspiring Developer | Continuous Learner | Life Architect</p>
+            </div>
+          </div>
+          <div class="profile-details">
+            <div class="detail-item"><i class="fa-solid fa-location-dot"></i> Bangladesh</div>
+            <div class="detail-item"><i class="fa-solid fa-code"></i> Web Development</div>
+            <div class="detail-item"><i class="fa-solid fa-graduation-cap"></i> Higher Education Prep</div>
+          </div>
+        </div>
+
+        <!-- DYNAMIC DISPLAY VIEWER (ON BUTTON CLICK) -->
+        <div id="dynamic-viewer" class="info-viewer" style="display: none;">
+          <div class="viewer-header">
+            <h3 id="viewer-title"><i class="fa-solid fa-circle-info"></i> Section Details</h3>
+            <button class="close-btn" onclick="closeViewer()"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <p id="viewer-desc">Click any sidebar button to view its detailed breakdown here.</p>
+          <a id="viewer-link" href="#" target="_blank" class="external-link-btn" style="display: none;">
+            Open Connected Document/Drive <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <!-- ALWAYS VISIBLE: THE 3 CODE CARDS -->
+        <h2 class="section-title">Core Operating Codes</h2>
+        <div class="pos-grid">
+          
+          <!-- Code of Conduct Card -->
+          <div class="pos-card hover-card" id="card-conduct">
+            <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h3>Code of Conduct</h3>
+            <ul class="code-list">
+              <li><strong>Active Listening:</strong> Listen carefully before responding.</li>
+              <li><strong>Promises:</strong> Fulfill all commitments 100%.</li>
+              <li><strong>Controlled Reactions:</strong> Avoid quick anger; stay calm.</li>
+              <li><strong>Respect & Modesty:</strong> Treat everyone with humility.</li>
+              <li><strong>Gossip-Free:</strong> Never speak ill behind anyone's back.</li>
+            </ul>
+          </div>
+
+          <!-- Code of Mindset Card -->
+          <div class="pos-card hover-card" id="card-mindset">
+            <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Code of Mindset</h3>
+            <ul class="code-list">
+              <li><strong>Growth over Comfort:</strong> Improve at least 1% daily.</li>
+              <li><strong>Resilience:</strong> Treat failure as a learning opportunity.</li>
+              <li><strong>Control Focus:</strong> Direct energy only to controllable factors.</li>
+              <li><strong>Emotional Independence:</strong> Own your peace of mind.</li>
+              <li><strong>Gratitude Practice:</strong> Say "Alhamdulillah" every day.</li>
+            </ul>
+          </div>
+
+          <!-- Social & Digital Ethics Card -->
+          <div class="pos-card hover-card" id="card-ethics">
+            <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Social & Digital Ethics</h3>
+            <ul class="code-list">
+              <li><strong>Intentional Screen Time:</strong> Avoid mindless scrolling.</li>
+              <li><strong>Privacy First:</strong> Guard personal & family privacy.</li>
+              <li><strong>Truth Verification:</strong> Verify facts before sharing.</li>
+              <li><strong>Digital Kindness:</strong> Use polite, respectful words online.</li>
+              <li><strong>Real-World Priority:</strong> Give full presence in person.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
